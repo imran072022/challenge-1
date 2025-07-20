@@ -25,23 +25,32 @@
   color: #3a3a3a;
 }
 /*HEADER STYLING (1) - (Navigation Bar)*/
-header {
-  max-width: 1140px;
-  margin: 0 auto;
+body {
+  margin: 0;
 }
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: none;
+}
+
 .brand-name {
   font-size: 1.5rem;
+  margin: 0;
 }
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1200px;
+  margin-top: 82px;
 }
 .navbar {
   list-style-type: none;
   display: flex;
   align-items: center;
   gap: 2.12rem;
+  margin-top: 0;
 }
 .navbar-items a {
   text-decoration: none;
@@ -55,6 +64,8 @@ nav {
 .banner-title {
   font-weight: bold;
   font-size: 3.25rem;
+  margin: 0;
+  line-height: 70px;
 }
 .banner-description {
   font-weight: 600;
@@ -69,26 +80,118 @@ nav {
 }
 .banner {
   display: flex;
-  gap: 133px;
-  background-image: url("images/Circle\ design.svg");
-  background-repeat: no-repeat;
-  background-position: calc(100% - 10px) 50px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 42px;
 }
 .banner-img {
-  margin: 80px 45px 0 0;
+  background-image: url("images/Circle\ design.svg");
+  background-repeat: no-repeat;
+  width: 475px;
+  height: 475px;
+  border: 1px solid;
+}
+.banner-img img {
+  width: 440px;
 }
 .banner-content {
-  margin-top: 9.1rem;
   width: 582px;
 }
-.banner-title {
-  margin: 0;
-  line-height: 70px;
-}
 /*Header last part - logos*/
-.sponsors {
-  max-width: 987px;
-  margin: 105px auto 0 auto;
+
+/*HEADER RESPONSIVE*/
+@media screen and (max-width: 576px) {
+  nav {
+    flex-direction: column;
+    margin-top: 35px;
+  }
+  .brand-name {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .navbar-items a {
+    font-size: 0.875rem;
+  }
+  .navbar {
+    flex-direction: column;
+    padding: 0;
+    gap: 0.4rem;
+  }
+  .banner {
+    margin-top: 22px;
+    flex-direction: column-reverse;
+  }
+
+  .banner-title {
+    font-size: 1.75rem;
+    line-height: 1.5;
+  }
+  .banner-content {
+    text-align: center;
+
+    font-size: 0.875rem;
+    margin-top: 20px;
+  }
+  .banner-button {
+    font-weight: 500;
+  }
+}
+main {
+  max-width: 1047px;
+  margin: 0 auto;
+}
+/*PRODUCT COLLECTION SECTION*/
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.cards {
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+}
+.card-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: rgba(24, 25, 31, 1);
+  margin: 8px 0 6px 0;
+}
+.price {
+  font-size: 1.5rem;
+  font-family: "inter", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 150%;
+  margin: 0;
+}
+.rating {
   display: flex;
-  gap: 60px;
+  align-items: center;
+  gap: 0.5rem;
+}
+.rating-text {
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: rgba(94, 99, 102, 1);
+  margin: 0;
+}
+.product-description {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: rgba(120, 120, 133, 1);
+  font-family: "inter", sans-serif;
+  line-height: 143%;
+  margin: 0;
+}
+.see-more {
+  text-align: right;
+  font-weight: bold;
+  color: rgba(224, 44, 109, 0.87);
+  margin: 50px 0 0;
 }
