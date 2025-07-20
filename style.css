@@ -20,14 +20,19 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
+/*UNIVERSAL STYLING*/
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
 /*COLORS and SHARED ITEMS*/
 .color1 {
   color: #3a3a3a;
 }
 /*HEADER STYLING (1) - (Navigation Bar)*/
-body {
-  margin: 0;
-}
+
 header {
   max-width: 1200px;
   margin: 0 auto;
@@ -136,13 +141,18 @@ nav {
     font-weight: 500;
   }
 }
+.main-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 main {
-  max-width: 1047px;
+  max-width: 1110px;
   margin: 0 auto;
 }
 /*PRODUCT COLLECTION SECTION*/
 .collection {
-  margin: 0 16px 0 16px;
+  max-width: 1047px;
+  margin: 0 auto;
 }
 .section-title {
   text-align: center;
@@ -212,5 +222,87 @@ main {
   .cards-container {
     grid-template-columns: 1fr;
     column-gap: 15px;
+  }
+  .collection {
+    margin: 0 16px 0 16px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .collection {
+    margin: 0 16px 0 16px;
+  }
+}
+/*FEATURED PRODUCTS SECTION STYLING*/
+.featured-product {
+  max-width: 1110px;
+  margin: 100px auto;
+  display: flex;
+  gap: 96px;
+  align-items: center;
+}
+.featured-image-container {
+  flex: 0 0 404px;
+}
+.featured-product img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.featured-product-title {
+  font-weight: bold;
+  font-size: 2.375rem;
+  line-height: 60px;
+  margin: 23px 0 0;
+  letter-spacing: 0px;
+}
+
+.featured-product-description {
+  font-weight: bold;
+  line-height: 28px;
+  color: rgba(108, 108, 108, 1);
+  margin: 16px 0;
+}
+.button2 {
+  background-color: #e02c6d;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  font-weight: bold;
+}
+/*FEATURED PRODUCT SECTION MOBILE RESPONSIVE*/
+@media screen and (max-width: 576px) {
+  .featured-product {
+    flex-direction: column-reverse;
+    padding: 0 16px;
+    margin: 50px 0;
+    gap: 30px;
+  }
+  .featured-product-content {
+    text-align: center;
+  }
+  .featured-product-title {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  .featured-image-container {
+    padding: 0 14px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .featured-product {
+    flex-direction: column-reverse;
+    gap: 66px;
+  }
+  .featured-product-content {
+    text-align: center;
+  }
+  .featured-image-container {
+    width: 100%;
+    padding: 0 66px;
   }
 }
