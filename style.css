@@ -27,6 +27,14 @@ body {
 * {
   box-sizing: border-box;
 }
+.main-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main {
+  max-width: 1110px;
+  margin: 0 auto;
+}
 /*COLORS and SHARED ITEMS*/
 .color1 {
   color: #3a3a3a;
@@ -36,7 +44,7 @@ body {
 header {
   max-width: 1200px;
   margin: 0 auto;
-  display: none;
+  padding-top: 85px;
 }
 
 .brand-name {
@@ -45,17 +53,15 @@ header {
 }
 nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin-top: 82px;
+  align-items: center;
 }
 .navbar {
   list-style-type: none;
   display: flex;
   align-items: center;
   gap: 2.12rem;
-  margin-top: 0;
+  margin: 0;
 }
 .navbar-items a {
   text-decoration: none;
@@ -85,69 +91,54 @@ nav {
 }
 .banner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-top: 42px;
+  gap: 131px;
 }
 .banner-img {
-  background-image: url("images/Circle\ design.svg");
+  background-image: url(images/Circle\ design.svg);
   background-repeat: no-repeat;
-  width: 475px;
-  height: 475px;
-  border: 1px solid;
+  background-position: center;
+  background-size: contain;
+  padding: 30px 33px 30px 2px;
 }
-.banner-img img {
+
+.banner-img > img {
   width: 440px;
+  height: auto;
 }
-.banner-content {
-  width: 582px;
-}
+
 /*Header last part - logos*/
 
 /*HEADER RESPONSIVE*/
 @media screen and (max-width: 576px) {
-  nav {
-    flex-direction: column;
-    margin-top: 35px;
+  header {
+    padding-top: 35px;
   }
-  .brand-name {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  .navbar-items a {
-    font-size: 0.875rem;
-  }
+  nav,
   .navbar {
     flex-direction: column;
+  }
+  .navbar {
+    gap: 5px;
     padding: 0;
-    gap: 0.4rem;
   }
   .banner {
-    margin-top: 22px;
     flex-direction: column-reverse;
+    margin-top: 22px;
+    gap: 14px;
   }
-
-  .banner-title {
-    font-size: 1.75rem;
-    line-height: 1.5;
+  .banner-img > img {
+    width: 280px;
+    padding: 51px 33px 16px 22px;
   }
   .banner-content {
     text-align: center;
-
-    font-size: 0.875rem;
-    margin-top: 20px;
   }
-  .banner-button {
-    font-weight: 500;
+  .banner-title {
+    font-size: 1.8rem;
+    line-height: 1.5;
   }
-}
-.main-wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-main {
-  max-width: 1110px;
-  margin: 0 auto;
 }
 /*PRODUCT COLLECTION SECTION*/
 .collection {
@@ -210,13 +201,12 @@ main {
   color: rgba(120, 120, 133, 1);
   font-family: "inter", sans-serif;
   line-height: 143%;
-  margin: 0;
 }
 .see-more {
   text-align: right;
   font-weight: bold;
   color: rgba(224, 44, 109, 0.87);
-  margin: 50px 0 0;
+  margin-top: 50px;
 }
 @media screen and (max-width: 576px) {
   .cards-container {
@@ -225,6 +215,9 @@ main {
   }
   .collection {
     margin: 0 16px 0 16px;
+  }
+  .see-more {
+    margin-top: 32px;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -288,8 +281,10 @@ main {
   .featured-product-title {
     font-size: 1.5rem;
     line-height: 1.5;
+    margin: 0;
   }
   .featured-image-container {
+    flex: 0 0 auto;
     padding: 0 14px;
   }
 }
@@ -305,4 +300,40 @@ main {
     width: 100%;
     padding: 0 66px;
   }
+}
+/*FOOTER STYLING*/
+footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: rgba(10, 8, 38, 1);
+  padding: 50px 0;
+}
+.footer-container {
+  text-align: center;
+  padding: 1px;
+}
+.footer-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+.footer-text1 {
+  color: rgba(217, 219, 225, 1);
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin: 3px 0;
+}
+.footer-text2 {
+  color: rgba(217, 219, 225, 1);
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin: 0 0 17px;
+}
+.footer-icons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+@media screen and (max-width: 576px) {
 }
